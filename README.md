@@ -1,6 +1,6 @@
 # Jenkins as Code as fast as possible
 
-### A minimal description of what is required to create, install and configure jenkins in a single command inside a docker container.
+##### A minimal description of what is required to create, install and configure jenkins in a single command inside a docker container.
 
 ## How to run
 
