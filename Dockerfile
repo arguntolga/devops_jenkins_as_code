@@ -1,5 +1,5 @@
 # Base image
-FROM jenkins/jenkins:latest
+FROM jenkins/jenkins:lts
 # Environment variables
 ENV CASC_JENKINS_CONFIG /var/jenkins_home/casc_configs
 
