@@ -5,6 +5,7 @@ credentials:latest
 docker-plugin:latest
 influxdb:latest
 job-dsl:latest
+ldap:latest
 prometheus:latest
 remote-file:latest
 workflow-aggregator:latest
