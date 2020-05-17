@@ -9,6 +9,6 @@ ADD jenkins.yaml /usr/share/jenkins/ref/
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 
 # Environment variables
-ENV CASC_JENKINS_CONFIG /var/jenkins_home/casc_configs
+ENV CASC_JENKINS_CONFIG /usr/share/jenkins/ref/
 
 VOLUME /var/jenkins_home
