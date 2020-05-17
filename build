@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker build -t devops_jenkins:latest .
