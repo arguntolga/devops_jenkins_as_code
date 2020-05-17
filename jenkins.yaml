@@ -4,9 +4,31 @@ jenkins:
   views:
     - myView:
         name: "Devops Jobs Config as Code"
-security:
-  globalJobDslSecurityConfiguration:
-    useScriptSecurity: false
+  securityRealm:
+    ldap:
+      configurations:
+        - server: "ldaps://ldap.jumpcloud.com"
+          rootDN: ""
+          inhibitInferRootDN: true
+          userSearchBase: "ou=Users,o=5ec1612e063bfb140233c749,dc=jumpcloud,dc=com"
+          userSearch: "uid={0}"
+          groupSearchBase: "ou=Users,o=5ec1612e063bfb140233c749,dc=jumpcloud,dc=com"
+          groupSearchFilter: "(& (cn={0})(objectclass=groupOfNames))"
+          groupMembershipStrategy:
+            fromGroupSearch:
+              filter: "(member={0})"
+          managerDN: "uid=myldapuser,ou=Users,o=5ec1612e063bfb140233c749,dc=jumpcloud,dc=com"
+          managerPasswordSecret: "Test1234"
+          displayNameAttributeName: "cn"
+          mailAddressAttributeName: "mail"
+      cache:
+        size: 100
+        ttl: 10
+      userIdStrategy: "caseInsensitive"
+      groupIdStrategy: "caseInsensitive"
+security: 
+  globalJobDslSecurityConfiguration: 
+    useScriptSecurity: false 
 jobs:
   - script: >
       freeStyleJob("Jobs Generator") {

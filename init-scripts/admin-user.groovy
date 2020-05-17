@@ -4,6 +4,7 @@
 import jenkins.model.*
 import hudson.security.*
 
+/*
 println "--> admin kullanicisi olusturuluyor..."
 
 def adminUsername = System.getenv("ADMIN_USERNAME")
@@ -17,5 +18,6 @@ Jenkins.instance.setSecurityRealm(hudsonRealm)
 def strategy = new FullControlOnceLoggedInAuthorizationStrategy()
 strategy.setAllowAnonymousRead(false)
 Jenkins.instance.setAuthorizationStrategy(strategy)
+*/
 
 Jenkins.instance.save()
