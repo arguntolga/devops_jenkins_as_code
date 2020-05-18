@@ -1,3 +1,4 @@
+bitbucket:latest
 blueocean:latest
 configuration-as-code:latest
 configuration-as-code-support:latest
@@ -5,6 +6,7 @@ credentials:latest
 docker-plugin:latest
 email-ext:latest
 influxdb:latest
+jira:latest
 job-dsl:latest
 ldap:latest
 mailer:latest

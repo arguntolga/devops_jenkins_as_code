@@ -93,3 +93,18 @@ jobs:
             }
         }
       }
+
+unclassified:
+  jiraGlobalConfiguration:
+    sites:
+      - url: "https://issues.jenkins-ci.org"
+  mailer:
+    replyToAddress: "do-not-reply@acme.org"
+    smtpHost: "smtp.acme.org"
+    smtpPort: 4441
+  bitbucketendpointconfiguration:
+    endpoints:
+    - bitbucketServerEndpoint:
+        displayName: "Stash"
+        manageHooks: false
+        serverUrl: "http://10.0.2.199"
