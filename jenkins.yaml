@@ -26,6 +26,23 @@ jenkins:
         ttl: 10
       userIdStrategy: "caseInsensitive"
       groupIdStrategy: "caseInsensitive"
+  authorizationStrategy:
+    roleBased:
+      roles:
+        global:
+          - name: "admin"
+            description: "Jenkins administrators"
+            permissions:
+              - "Overall/Administer"
+            assignments:
+              - "jena"
+          - name: "readonly"
+            description: "Read-only users"
+            permissions:
+              - "Overall/Read"
+              - "Job/Read"
+            assignments:
+              - "authenticated"    
 security: 
   globalJobDslSecurityConfiguration: 
     useScriptSecurity: false 

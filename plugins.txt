@@ -8,6 +8,7 @@ job-dsl:latest
 ldap:latest
 prometheus:latest
 remote-file:latest
+role-strategy:latest
 workflow-aggregator:latest
 
 
