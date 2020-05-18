@@ -3,12 +3,15 @@ configuration-as-code:latest
 configuration-as-code-support:latest
 credentials:latest
 docker-plugin:latest
+email-ext:latest
 influxdb:latest
 job-dsl:latest
 ldap:latest
+mailer:latest
 prometheus:latest
 remote-file:latest
 role-strategy:latest
+ssh-credentials:latest
 workflow-aggregator:latest
 
 

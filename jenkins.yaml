@@ -1,6 +1,15 @@
 ---
 jenkins:
   systemMessage: "Devops Jenkins as Code (JaC)"
+
+  numExecutors: 5
+  scmCheckoutRetryCount: 2
+  mode: NORMAL
+  globalNodeProperties:
+    - envVars:
+        env:
+          - key: FOO
+            value: BAR
   views:
     - myView:
         name: "Devops Jobs Config as Code"
@@ -42,7 +51,33 @@ jenkins:
               - "Overall/Read"
               - "Job/Read"
             assignments:
-              - "authenticated"    
+              - "authenticated"           
+  clouds:
+    - docker:
+        name: "docker"
+        dockerApi:
+          dockerHost:
+            uri: "unix:///var/run/docker.sock"
+        templates:
+          - labelString: "docker-agent"
+            dockerTemplateBase:
+              image: "jenkins/slave"
+              volumes:
+                - hello:/hello
+                - world:/world
+              environmentsString: |
+                hello=world
+                foo=bar
+            remoteFs: "/home/jenkins/agent"
+            connector:
+              attach:
+                user: "jenkins"
+            instanceCapStr: "10"            
+tool:
+  git:
+    installations:
+      - name: git
+        home: /usr/local/bin/git
 security: 
   globalJobDslSecurityConfiguration: 
     useScriptSecurity: false 
