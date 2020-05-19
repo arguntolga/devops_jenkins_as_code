@@ -105,6 +105,11 @@ unclassified:
   bitbucketendpointconfiguration:
     endpoints:
     - bitbucketServerEndpoint:
-        displayName: "Stash"
-        manageHooks: false
-        serverUrl: "http://10.0.2.199"
+        displayName: "gobitbucket"
+        serverUrl: "http://10.0.2.199"        
+        callCanMerge: true
+        manageHooks: true
+        credentialsId: "mycreds"
+        
+
+        
