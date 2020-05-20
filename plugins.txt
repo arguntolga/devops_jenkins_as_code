@@ -3,16 +3,21 @@ blueocean:latest
 configuration-as-code:latest
 configuration-as-code-support:latest
 credentials:latest
+cvs:latest
 docker-plugin:latest
 email-ext:latest
+github-autostatus:latest
 influxdb:latest
 jira:latest
 job-dsl:latest
 ldap:latest
 mailer:latest
+mask-passwords:latest
+maven-plugin:latest
 prometheus:latest
 remote-file:latest
 role-strategy:latest
+sonar:latest
 ssh-credentials:latest
 workflow-aggregator:latest
 
